@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Twitch User Hightlights Search Demo</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+		<script src="js/main.js" type="text/javascript"></script>
+		<style type="text/css">
+		img.preview {
+			width: 320px;
+			height: 240px;
+		}
+		</style>
+	</head>
+	<body>
+		<h1>Twitch User Hightlights Search Demo</h1>
+
+		<form action="javascript:;" id="download_form">
+			<label for="channel">Channel:</label>
+			<input type="text" id="channel" placeholder="channel" pattern="[_a-zA-Z0-9]+" required/>
+
+			<button type="submit">Download Highlight Info</button>
+		</form>
+
+		<ul id="log">
+		</ul>
+
+		<form action="javascript:;" id="search_form">
+			<label for="q">Search:</label>
+			<input type="search" id="q" placeholder="search text..."/>
+
+			<button type="submit">Search</button>
+		</form>
+
+		<table>
+			<thead>
+				<tr>
+					<th>Preview</th>
+					<th>Title</th>
+					<th>Game</th>
+					<th>Tags</th>
+					<th>Description</th>
+				</tr>
+			</thead>
+			<tbody id="results">
+				<tr>
+					<td colspan="5">Nothing found</td>
+				</tr>
+			</tbody>
+		</table>
+	</body>
+</html>
